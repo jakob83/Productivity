@@ -115,3 +115,5 @@ document.getElementById("calc7").addEventListener("click", function(){
     console.log(counter+" Minuten")
 }
 )
+
+/*lost*/
