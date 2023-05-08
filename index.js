@@ -1,3 +1,4 @@
+table=document.getElementById("tablel")
 addRowButton = document.getElementById("addRow")
 tr1 = document.getElementById("tr1")
 
@@ -12,19 +13,24 @@ addRowButton.addEventListener("click", function addRow(){
         td.appendChild(input)
         tr.appendChild(td)
     }
-    document.getElementById("tablel").appendChild(tr)
+    table.appendChild(tr)
+    
 })
 
 
 
 
 document.getElementById("calc1").addEventListener("click", function(){
-    inputs = document.getElementsByClassName("input")[0]
-    inputsValue = inputs.value
-    
-    console.log(inputsValue)
 
-})
+    inputs = document.getElementsByClassName("input")
+    counter1 = 0
 
+    for(i=0;i<inputs.length;i+=7){
+        value = Number(inputs[i].value) 
+        counter1 += value
+}
+    console.log(counter1+" Seiten")
+}
+)
 
 
