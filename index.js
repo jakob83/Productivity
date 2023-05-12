@@ -29,6 +29,7 @@ document.getElementById("calc1").addEventListener("click", function(){
         value = Number(inputs[i].value) 
         counter += value
 }
+<<<<<<< HEAD
     document.getElementById("outcome-book").innerHTML = counter+" Seiten"
 }
 )
@@ -113,11 +114,16 @@ document.getElementById("calc7").addEventListener("click", function(){
         counter += value
 }
     document.getElementById("outcome-handy").innerHTML = counter+" Minuten"
+=======
+    console.log(counter+" Seiten")
+>>>>>>> 29ed932c06bdbf49ad6b998e4aac909bef2c5394
 }
 )
 
 
+document.getElementById("calc2").addEventListener("click", function(){
 
+<<<<<<< HEAD
 
 
 // Check if the counter value is already stored in local storage
@@ -136,3 +142,86 @@ localStorage.setItem('counter', counter);
 
 // Display the counter value on the page
 document.getElementById('counter').textContent = counter;
+=======
+    inputs = document.getElementsByClassName("input")
+    counter = 0
+
+    for(i=1;i<inputs.length;i+=7){
+        value = Number(inputs[i].value) 
+        counter += value
+}
+    console.log(counter+" Minuten")
+}
+)
+
+document.getElementById("calc3").addEventListener("click", function(){
+
+    inputs = document.getElementsByClassName("input")
+
+    counter = 0
+    for(i=2;i<inputs.length;i+=7){
+        value = inputs[i].value
+        if(value==="Ja"){
+            counter+=1
+        }
+    }
+        console.log(counter+" Mal verfehlt")
+}
+)
+
+document.getElementById("calc4").addEventListener("click", function(){
+
+    inputs = document.getElementsByClassName("input")
+
+    counter = 0
+    for(i=3;i<inputs.length;i+=7){
+        value = inputs[i].value
+        if(value==="Ja"){
+            counter+=1
+        }
+    }
+        console.log(counter+" Mal X")
+}
+)
+
+document.getElementById("calc5").addEventListener("click", function(){
+
+    inputs = document.getElementsByClassName("input")
+    counter = 0
+
+    for(i=4;i<inputs.length;i+=7){
+        value = Number(inputs[i].value) 
+        counter += value
+}
+    console.log(counter+" Minuten")
+}
+)
+
+document.getElementById("calc6").addEventListener("click", function(){
+
+    inputs = document.getElementsByClassName("input")
+    counter = 0
+
+    for(i=5;i<inputs.length;i+=7){
+        value = Number(inputs[i].value) 
+        counter += value
+}
+    console.log(counter+" Minuten")
+}
+)
+
+document.getElementById("calc7").addEventListener("click", function(){
+
+    inputs = document.getElementsByClassName("input")
+    counter = 0
+
+    for(i=6;i<inputs.length;i+=7){
+        value = Number(inputs[i].value) 
+        counter += value
+}
+    console.log(counter+" Minuten")
+}
+)
+
+/*lost*/
+>>>>>>> 29ed932c06bdbf49ad6b998e4aac909bef2c5394
