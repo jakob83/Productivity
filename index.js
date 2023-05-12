@@ -29,7 +29,8 @@ document.getElementById("calc1").addEventListener("click", function(){
         value = Number(inputs[i].value) 
         counter += value
 }
-<<<<<<< HEAD
+    
+   
     document.getElementById("outcome-book").innerHTML = counter+" Seiten"
 }
 )
@@ -115,7 +116,7 @@ document.getElementById("calc7").addEventListener("click", function(){
 }
     document.getElementById("outcome-handy").innerHTML = counter+" Minuten"
 
-    document.getElementById("outcome-book").inner-HTML = counter+" Seiten"
+    document.getElementById("outcome-book").innerHTML = counter+" Seiten"
 
 }
 )
