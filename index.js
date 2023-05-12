@@ -1,3 +1,4 @@
+table=document.getElementById("tablel")
 addRowButton = document.getElementById("addRow")
 tr1 = document.getElementById("tr1")
 
@@ -12,19 +13,126 @@ addRowButton.addEventListener("click", function addRow(){
         td.appendChild(input)
         tr.appendChild(td)
     }
-    document.getElementById("tablel").appendChild(tr)
+    table.appendChild(tr)
+    
 })
 
 
 
 
 document.getElementById("calc1").addEventListener("click", function(){
-    inputs = document.getElementsByClassName("input")[0]
-    inputsValue = inputs.value
-    
-    console.log(inputsValue)
 
-})
+    inputs = document.getElementsByClassName("input")
+    counter = 0
+
+    for(i=0;i<inputs.length;i+=7){
+        value = Number(inputs[i].value) 
+        counter += value
+}
+    document.getElementById("outcome-book").innerHTML = counter+" Seiten"
+}
+)
+
+
+document.getElementById("calc2").addEventListener("click", function(){
+
+    inputs = document.getElementsByClassName("input")
+    counter = 0
+
+    for(i=1;i<inputs.length;i+=7){
+        value = Number(inputs[i].value) 
+        counter += value
+}
+    document.getElementById("outcome-code").innerHTML = counter+" Minuten"
+}
+)
+
+document.getElementById("calc3").addEventListener("click", function(){
+
+    inputs = document.getElementsByClassName("input")
+
+    counter = 0
+    for(i=2;i<inputs.length;i+=7){
+        value = inputs[i].value
+        if(value==="Ja"){
+            counter+=1
+        }
+    }
+        document.getElementById("outcome-jjj").innerHTML = counter+" Mal J"
+}
+)
+
+document.getElementById("calc4").addEventListener("click", function(){
+
+    inputs = document.getElementsByClassName("input")
+
+    counter = 0
+    for(i=3;i<inputs.length;i+=7){
+        value = inputs[i].value
+        if(value==="Ja"){
+            counter+=1
+        }
+    }
+        document.getElementById("outcome-xxx").innerHTML = counter+" Mal X"
+}
+)
+
+document.getElementById("calc5").addEventListener("click", function(){
+
+    inputs = document.getElementsByClassName("input")
+    counter = 0
+
+    for(i=4;i<inputs.length;i+=7){
+        value = Number(inputs[i].value) 
+        counter += value
+}
+    document.getElementById("outcome-footy").innerHTML = counter+" Minuten"
+}
+)
+
+document.getElementById("calc6").addEventListener("click", function(){
+
+    inputs = document.getElementsByClassName("input")
+    counter = 0
+
+    for(i=5;i<inputs.length;i+=7){
+        value = Number(inputs[i].value) 
+        counter += value
+}
+    document.getElementById("outcome-social").innerHTML = counter+" Minuten"
+}
+)
+
+document.getElementById("calc7").addEventListener("click", function(){
+
+    inputs = document.getElementsByClassName("input")
+    counter = 0
+
+    for(i=6;i<inputs.length;i+=7){
+        value = Number(inputs[i].value) 
+        counter += value
+}
+    document.getElementById("outcome-handy").innerHTML = counter+" Minuten"
+}
+)
 
 
 
+
+
+// Check if the counter value is already stored in local storage
+let counter = localStorage.getItem('counter');
+if (counter === null) {
+  // If the counter value is not stored in local storage, initialize it to 0
+  counter = 0;
+} else {
+  // If the counter value is stored in local storage, parse it as an integer
+  counter = parseInt(counter);
+}
+
+// Increment the counter and store the new value in local storage
+counter++;
+localStorage.setItem('counter', counter);
+
+// Display the counter value on the page
+document.getElementById('counter').textContent = counter;
