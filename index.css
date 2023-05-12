@@ -46,10 +46,8 @@ html{
 }
 body{
     min-height: 1000px;
-<<<<<<< HEAD
+
     border-collapse: collapse;
-=======
->>>>>>> 29ed932c06bdbf49ad6b998e4aac909bef2c5394
 }
 
 
@@ -93,7 +91,7 @@ body{
 .button-nav:active{
     max-width: 200px;
     height: 75px;
-<<<<<<< HEAD
+
 }
 .outcome-container {
     display: flex;
@@ -113,6 +111,6 @@ body{
     border: 1px solid black;
     border-collapse: collapse;
   }
-=======
-}
->>>>>>> 29ed932c06bdbf49ad6b998e4aac909bef2c5394
+
+
+
