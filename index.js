@@ -115,7 +115,7 @@ document.getElementById("calc7").addEventListener("click", function(){
 }
     document.getElementById("outcome-handy").innerHTML = counter+" Minuten"
 
-    document.getElementById("outcome-book").innerHTML = counter+" Seiten"
+
 
 }
 )
