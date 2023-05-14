@@ -15,10 +15,14 @@ addRowButton.addEventListener("click", function addRow(){
     }
     table.appendChild(tr)
     
+    // save table state to localStorage
+    localStorage.setItem('table', table.innerHTML);
 })
 
-
-
+// load table state from localStorage on page load
+if (localStorage.getItem('table')) {
+    table.innerHTML = localStorage.getItem('table');
+}
 
 document.getElementById("calc1").addEventListener("click", function(){
 
@@ -28,12 +32,10 @@ document.getElementById("calc1").addEventListener("click", function(){
     for(i=0;i<inputs.length;i+=7){
         value = Number(inputs[i].value) 
         counter += value
-}
+    }
 
     document.getElementById("outcome-book").innerHTML = counter+" Seiten"
-}
-)
-
+})
 
 document.getElementById("calc2").addEventListener("click", function(){
 
@@ -43,40 +45,40 @@ document.getElementById("calc2").addEventListener("click", function(){
     for(i=1;i<inputs.length;i+=7){
         value = Number(inputs[i].value) 
         counter += value
-}
+    }
+
     document.getElementById("outcome-code").innerHTML = counter+" Minuten"
-}
-)
+})
 
 document.getElementById("calc3").addEventListener("click", function(){
 
     inputs = document.getElementsByClassName("input")
-
     counter = 0
+
     for(i=2;i<inputs.length;i+=7){
         value = inputs[i].value
         if(value==="Ja"){
             counter+=1
         }
     }
-        document.getElementById("outcome-jjj").innerHTML = counter+" Mal J"
-}
-)
+
+    document.getElementById("outcome-jjj").innerHTML = counter+" Mal J"
+})
 
 document.getElementById("calc4").addEventListener("click", function(){
 
     inputs = document.getElementsByClassName("input")
-
     counter = 0
+
     for(i=3;i<inputs.length;i+=7){
         value = inputs[i].value
         if(value==="Ja"){
             counter+=1
         }
     }
-        document.getElementById("outcome-xxx").innerHTML = counter+" Mal X"
-}
-)
+
+    document.getElementById("outcome-xxx").innerHTML = counter+" Mal X"
+})
 
 document.getElementById("calc5").addEventListener("click", function(){
 
@@ -86,10 +88,10 @@ document.getElementById("calc5").addEventListener("click", function(){
     for(i=4;i<inputs.length;i+=7){
         value = Number(inputs[i].value) 
         counter += value
-}
+    }
+
     document.getElementById("outcome-footy").innerHTML = counter+" Minuten"
-}
-)
+})
 
 document.getElementById("calc6").addEventListener("click", function(){
 
@@ -99,10 +101,10 @@ document.getElementById("calc6").addEventListener("click", function(){
     for(i=5;i<inputs.length;i+=7){
         value = Number(inputs[i].value) 
         counter += value
-}
+    }
+
     document.getElementById("outcome-social").innerHTML = counter+" Minuten"
-}
-)
+})
 
 document.getElementById("calc7").addEventListener("click", function(){
 
@@ -112,10 +114,8 @@ document.getElementById("calc7").addEventListener("click", function(){
     for(i=6;i<inputs.length;i+=7){
         value = Number(inputs[i].value) 
         counter += value
-}
+    }
+
     document.getElementById("outcome-handy").innerHTML = counter+" Minuten"
-
-
-
-}
-)
+    
+})
