@@ -119,3 +119,17 @@ document.getElementById("calc7").addEventListener("click", function(){
     document.getElementById("outcome-handy").innerHTML = counter+" Minuten"
     
 })
+
+deleteBtn = document.getElementById("delete").addEventListener("click", deleteFunc)
+
+function deleteFunc(){
+    inputs = document.getElementsByClassName("input")
+    tableRow = document.getElementsByTagName("tr")
+    tablel = document.getElementsByClassName("tablel")
+    for(i=0; i<7; i++){
+        inputs[inputs.length-1].remove()
+    }
+    tableRow[tableRow.length-1].remove()
+}
+
+console.log(document.getElementsByTagName("tr"))
