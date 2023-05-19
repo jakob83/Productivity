@@ -2,6 +2,7 @@ table=document.getElementById("tablel")
 addRowButton = document.getElementById("addRow")
 tr1 = document.getElementById("tr1")
 
+
 addRowButton.addEventListener("click", function addRow(){
 
     tr = document.createElement("tr")
@@ -15,14 +16,40 @@ addRowButton.addEventListener("click", function addRow(){
     }
     table.appendChild(tr)
     
-    // save table state to localStorage
+    //save table state to localStorage
     localStorage.setItem('table', table.innerHTML);
+
+    //localStorage.setItem("input1value", document.getElementsByClassName("input").value)
+
+    //for(i=0; i<input.length; i++){
+        //localStorage.setItem('inputValue'+i, document.getElementsByClassName("input")[i].value)    
+        
+    //}
+    // load table state from localStorage on page load
+
 })
 
-// load table state from localStorage on page load
-if (localStorage.getItem('table')) {
-    table.innerHTML = localStorage.getItem('table');
-}
+document.getElementById("save").addEventListener("click",function(){
+        const inputs = document.getElementsByClassName("input");
+    for (let i = 0; i < inputs.length; i++) {
+      const inputValue = inputs[i].value;
+      localStorage.setItem("value" + i, inputValue);
+    }
+})
+
+document.addEventListener("DOMContentLoaded", function() {
+    const inputs = document.getElementsByClassName("input");
+    for (let i = 0; i < inputs.length; i++) {
+      const storedValue = localStorage.getItem("value" + i);
+      if (storedValue) {
+        inputs[i].value = storedValue;
+      }
+    }
+
+  });
+   
+
+  
 
 document.getElementById("calc1").addEventListener("click", function(){
 
@@ -130,6 +157,14 @@ function deleteFunc(){
         inputs[inputs.length-1].remove()
     }
     tableRow[tableRow.length-1].remove()
+
+    // save table state to localStorage
+    localStorage.setItem('table', table.innerHTML);
 }
 
-console.log(document.getElementsByTagName("tr"))
+
+
+// load table state from localStorage on page load
+if (localStorage.getItem('table')) {
+    table.innerHTML = localStorage.getItem('table');
+}
