@@ -16,17 +16,7 @@ addRowButton.addEventListener("click", function addRow(){
     }
     table.appendChild(tr)
     
-    //save table state to localStorage
     localStorage.setItem('table', table.innerHTML);
-
-    //localStorage.setItem("input1value", document.getElementsByClassName("input").value)
-
-    //for(i=0; i<input.length; i++){
-        //localStorage.setItem('inputValue'+i, document.getElementsByClassName("input")[i].value)    
-        
-    //}
-    // load table state from localStorage on page load
-
 })
 
 document.getElementById("save").addEventListener("click",function(){
