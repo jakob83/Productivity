@@ -51,7 +51,7 @@ document.getElementById("calc1").addEventListener("click", function(){
         counter += value
     }
 
-    document.getElementById("outcome-book").innerHTML = counter+" Seiten"
+    document.getElementById("outcome-book").innerHTML = counter+" Minuten"
 })
 
 document.getElementById("calc2").addEventListener("click", function(){
@@ -158,3 +158,4 @@ function deleteFunc(){
 if (localStorage.getItem('table')) {
     table.innerHTML = localStorage.getItem('table');
 }
+
